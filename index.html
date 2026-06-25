@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kado Digital untuk Ayu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="screen-lock" class="screen active">
+        <div class="lock-container">
+            <div class="lock-icon">🔒</div>
+            <h3>hayolo, apa yaa kode nyaa</h3>
+            <div class="pin-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="keypad">
+                <button onclick="pressKey(1)">1</button>
+                <button onclick="pressKey(2)">2</button>
+                <button onclick="pressKey(3)">3</button>
+                <button onclick="pressKey(4)">4</button>
+                <button onclick="pressKey(5)">5</button>
+                <button onclick="pressKey(6)">6</button>
+                <button onclick="pressKey(7)">7</button>
+                <button onclick="pressKey(8)">8</button>
+                <button onclick="pressKey(9)">9</button>
+                <button onclick="clearKey()">Reset</button>
+                <button onclick="pressKey(0)">0</button>
+                <button onclick="deleteKey()">⌫</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="screen-heart" class="screen">
+        <div class="heart-animation-container">
+            <div class="heart-shape">I Love You</div>
+            <h2 class="fade-in-text">Ayu Raisya Zahra</h2>
+            <button class="btn" onclick="nextScreen('screen-intro')">KETUK UNTUK MEMBUKA</button>
+        </div>
+    </div>
+
+    <div id="screen-intro" class="screen">
+        <div class="intro-container">
+            <p class="subtitle">PERTUNJUKAN SPESIAL</p>
+            <h1>Panggung buat kamu</h1>
+            <p>untuk Ayu Raisya Zahra</p>
+            <button class="btn-gold" onclick="nextScreen('screen-gallery')">Buka tirai</button>
+        </div>
+    </div>
+
+    <div id="screen-gallery" class="screen">
+        <div class="gallery-container">
+            <span id="babak-title" class="babak-tag">BABAK 1 / 3</span>
+            <div class="card-photo">
+                <img id="gallery-img" src="https://via.placeholder.com/400x500" alt="Foto">
+                <p id="gallery-desc" class="caption">setiapp pap yang kamuu kasii mungkinn peyy ga selaluu ngomong cantikk, tapiii...</p>
+            </div>
+            <button id="btn-next-gallery" class="btn-gold" onclick="nextGallery()">Lanjut ceritanya</button>
+        </div>
+    </div>
+
+    <div id="screen-closing" class="screen">
+        <div class="closing-container">
+            <p class="subtitle">STANDING OVATION</p>
+            <h2>makasii buat selaluu ada</h2>
+            <div class="letter-box">
+                <p>"maapp kalo aku ga seromantis mantan-mantan kamu, sama aku bukann banyakk adegann romantiss malahh plengerr semuaa hahahaha"</p>
+                <p class="signature">— Peyyy, buat Ayu Raisya Zahra</p>
+            </div>
+            <button class="btn-gold" onclick="nextScreen('screen-bouquet')">Lihat bouquet</button>
+        </div>
+    </div>
+
+    <div id="screen-bouquet" class="screen">
+        <div class="bouquet-container">
+            <img class="bouquet-img" src="https://via.placeholder.com/300x400" alt="Bouquet Bunga">
+            <div class="bouquet-card">
+                <p class="subtitle">APRESIASI</p>
+                <h3>Thank You for Staying<br>untuk Ayu Raisya Zahra</h3>
+                <p class="love-text">i love youu sayanggg 💕</p>
+                <ul class="flower-meaning">
+                    <li>🌸 Pink rose · Gratitude</li>
+                    <li>🦋 Blue hydrangea · Gratitude</li>
+                    <li>🌼 White daisy · Innocence</li>
+                </ul>
+                <button class="btn" onclick="resetApp()">Back to card</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+
